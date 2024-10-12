@@ -1,0 +1,64 @@
+body{
+    background-color: skyblue;
+}
+
+.weather-parent{
+    border: 2px solid white;
+    box-shadow: 5px 5px 20px 15px white;
+    width: 600px;
+    height: 500px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+
+    padding: 20px;
+    border-radius: 10px;
+
+    position: relative;
+    left: 50%;
+    margin-top: 50px;
+    transform: translate(-50%);
+
+    
+}
+
+marquee{
+    color:brown;
+    font-size: 25px;
+}
+
+input ,button {
+    outline: none;
+    border: none;
+
+    padding: 5px;
+
+    width: 350px ;
+    height: 40px;
+
+    border-radius: 5px;
+
+    font-size: 15px;
+}
+
+button{
+    background-color: green;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.weather-info{
+    color: brown;
+}
+
+.weather-info h2{
+    margin: 20px;
+}
+
+label{
+    color:white;
+}

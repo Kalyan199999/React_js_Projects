@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+// import './App.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// import LoadContactComponents from './contact_manager/loadContactComponents';
+
+// import OtpLoad from './otp_components/otpLoad';
+
+// import LoadQuiz from './quiz/loadQuiz';
+
+// import LoadLogin_Signup from './login-signup/loadComponents';
+
+import Load_weather from './weather/Load_weather';
+
+const App = ()=>{
+  return(
+    <>
+      {/* <LoadContactComponents /> */}
+      {/* <OtpLoad /> */}
+      {/* <LoadQuiz /> */}
+      {/* <LoadLogin_Signup /> */}
+      <Load_weather />
+
+
+    </>
+  )
 }
 
 export default App;
