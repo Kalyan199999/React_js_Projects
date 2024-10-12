@@ -66,6 +66,8 @@ label{
 .lazyLoad{
     width: 400px;
     height: 200px;
-    border: 2px solid red;
+    border: 2px solid white;
     color:brown;
+
+    box-shadow: 5px 5px  white;
 }
