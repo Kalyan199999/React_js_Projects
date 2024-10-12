@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react"
 import axios from 'axios'
 
+import { lazy,Suspense } from "react";
+import Lazy from "./Lazy";
+
+const Weather_Component_Data = lazy(()=>import('./Weather_Component_Data'))
+
+
 function Weather_component() {
 
     const [search , setSearch] = useState({latitude :16.50745  ,longitude :80.6466});
@@ -47,11 +53,9 @@ function Weather_component() {
        <button onClick={(e)=>getData()}>submit</button>
 
        {
-        apiData.data && <div className="weather-info">
-            <h2>{`City name:`} <label >{`${apiData.data.name}`}</label> </h2>
-            <h2>{`Temperature:`} <label >{`${apiData.data.main.temp} C`}</label> </h2>
-            <h2>{`About Today:`} <label >{`${apiData.data.weather[0].description}`}</label> </h2>
-        </div>
+        apiData.data && <Suspense fallback={<Lazy />}>
+            <Weather_Component_Data name={apiData.data.name} temp={apiData.data.main.temp} description={apiData.data.weather[0].description}  />  
+        </Suspense> 
        }
 
     </div>
@@ -59,3 +63,10 @@ function Weather_component() {
 }
 
 export default Weather_component
+
+
+{/* <div className="weather-info">
+            <h2>{`City name:`} <label >{`${apiData.data.name}`}</label> </h2>
+            <h2>{`Temperature:`} <label >{`${apiData.data.main.temp} C`}</label> </h2>
+            <h2>{`About Today:`} <label >{`${apiData.data.weather[0].description}`}</label> </h2>
+        </div> */}
