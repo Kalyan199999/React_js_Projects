@@ -1,0 +1,120 @@
+body{
+    background-color: darkorchid;
+}
+
+.container{
+    margin: 5px;
+    padding: 10px;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.country_list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+    
+}
+
+.country-card{
+    
+    width: 300px;
+    height: 350px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: white;
+    padding: 20px;
+    
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    cursor: pointer;
+
+}
+
+.country-card img{
+    width: 80%;
+    height: 50%;
+
+    border-radius: 10px;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.country-card div{
+    text-align: center;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+    height: 50%;
+}
+
+.country-card:hover{
+    transform: scale(1.1);
+}
+
+input ,button{
+    outline: none;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.search-bar{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar input{
+    width: 200px;
+    padding: 10px;
+    border: 1px solid gray;
+    font-size: 18px;
+    transition: width 0.3s;
+}
+
+.search-bar input:focus{
+    width: 300px;
+}
+
+select{
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    background-color: gray;
+    color: white;
+}
+
+
+.lazy-load{
+    width: 200px;
+    height: 100px;
+    border: 2px solid red;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.sort-filter{
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    position: relative;
+    left: 35%;
+}

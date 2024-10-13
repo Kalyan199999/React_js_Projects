@@ -1,11 +1,10 @@
-import { useEffect, useState } from "react"
+import {  useState } from "react"
 import axios from 'axios'
 
 import { lazy,Suspense } from "react";
 import Lazy from "./Lazy";
 
 const Weather_Component_Data = lazy(()=>import('./Weather_Component_Data'))
-
 
 function Weather_component() {
 
@@ -17,10 +16,6 @@ function Weather_component() {
         console.log(search);
         
     }
-
-    // useEffect(()=>{
-    //     getData()
-    // } , [search])
 
     const getData = async ()=>{
         try {
@@ -54,7 +49,10 @@ function Weather_component() {
 
        {
         apiData.data && <Suspense fallback={<Lazy />}>
-            <Weather_Component_Data name={apiData.data.name} temp={apiData.data.main.temp} description={apiData.data.weather[0].description}  />  
+
+            <Weather_Component_Data name={apiData.data.name} temp={apiData.data.main.temp} description=
+            {apiData.data.weather[0].description}  />  
+            
         </Suspense> 
        }
 
