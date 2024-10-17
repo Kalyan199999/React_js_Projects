@@ -10,7 +10,9 @@
 
 // import Load_weather from './weather/Load_weather';
 
-import Load_Countries from './countries_api/Load_Countries';
+// import Load_Countries from './countries_api/Load_Countries';
+
+import Grid from "./grid_boxes/grids";
 
 const App = ()=>{
   return(
@@ -20,7 +22,8 @@ const App = ()=>{
       {/* <LoadQuiz /> */}
       {/* <LoadLogin_Signup /> */}
       {/* <Load_weather /> */}
-      <Load_Countries />
+      {/* <Load_Countries /> */}
+      <Grid />
 
 
     </>

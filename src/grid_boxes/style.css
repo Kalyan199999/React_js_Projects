@@ -1,0 +1,35 @@
+.parent{
+
+    width: 450px;
+    height: 450px;
+    /* border: 2px solid red; */
+
+    position: relative;
+    left: 100px;
+    top: 50px;
+
+    /* display: grid;
+    grid-template-columns: repeat(var(--cols,10),35px);
+    grid-template-rows: repeat(var(--rows,10),35px);
+     */
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    flex-wrap: wrap;
+
+    user-select: none;
+
+}
+
+.child{
+    width: 40px;
+    height: 40px;
+    border: 2px solid green;
+    text-align: center;
+}
+
+.selected{
+    background-color: green;
+    color: white;
+}
