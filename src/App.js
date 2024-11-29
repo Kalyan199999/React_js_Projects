@@ -15,7 +15,9 @@
 
 // import Grid from "./grid_boxes/grids";
 
-import LoadApi from "./api/LoadApi";
+// import LoadApi from "./api/LoadApi";
+
+import LoadReceips from "./receips/LoadReceips";
 
 
 const App = ()=>{
@@ -28,7 +30,8 @@ const App = ()=>{
       {/* <Load_weather /> */}
       {/* <Load_Countries /> */}
       {/* <Grid /> */}
-      <LoadApi />
+      {/* <LoadApi /> */}
+      <LoadReceips />
 
     </>
   )
