@@ -55,7 +55,8 @@ function Countries() {
         try {
             
             const res = await axios.get(`${API}/all`);
-
+            // console.log(res);
+            
             setCountries(res)
 
             const filter = res.data.sort((a,b)=>{

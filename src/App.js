@@ -1,5 +1,6 @@
 // import './App.css'
 
+
 // import LoadContactComponents from './contact_manager/loadContactComponents';
 
 // import OtpLoad from './otp_components/otpLoad';
@@ -12,7 +13,10 @@
 
 // import Load_Countries from './countries_api/Load_Countries';
 
-import Grid from "./grid_boxes/grids";
+// import Grid from "./grid_boxes/grids";
+
+import LoadApi from "./api/LoadApi";
+
 
 const App = ()=>{
   return(
@@ -23,8 +27,8 @@ const App = ()=>{
       {/* <LoadLogin_Signup /> */}
       {/* <Load_weather /> */}
       {/* <Load_Countries /> */}
-      <Grid />
-
+      {/* <Grid /> */}
+      <LoadApi />
 
     </>
   )
