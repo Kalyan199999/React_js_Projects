@@ -3,10 +3,11 @@ import axios from 'axios';
 import { Link } from "react-router-dom";
 import Loading from "./Loading";
 
+import PrepareReceipe from "./PrepareReceipe";
 
-const API = "https://dummyjson.com/recipes/";
+import API from './api'
 
-function Home({fetchItem}) {
+function Home() {
 
     const [receips , setReceips] = useState();
 
@@ -32,7 +33,7 @@ function Home({fetchItem}) {
                             <h3>{receipe.name}</h3>
                             <p>{receipe.rating}⭐</p>
                             <p>Difficulty:{receipe.difficulty}</p>
-                            <Link to="/prepareitem"><button onClick={()=>{fetchItem(receipe)}}>Try</button></Link>
+                            <Link to={`/prepareitem/${receipe.id}`}><button onClick={()=>{<PrepareReceipe  />}}>Try</button></Link>
                         </div>
                     )
                 })

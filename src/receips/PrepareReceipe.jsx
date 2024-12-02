@@ -1,7 +1,31 @@
+import { useParams } from "react-router-dom";
 import Loading from "./Loading"
+import { useState,useEffect } from "react";
 
-function PrepareReceipe({receipe}) {
-    // console.log(receipe);
+import API from "./api";
+import axios from "axios";
+
+function PrepareReceipe() {
+
+    const {id} = useParams();
+    
+    const [receipe , setReceip] = useState();
+
+    useEffect(()=>{
+        getData();
+    } ,[]);
+
+    const getData = async ()=>{
+        try {
+            const d = await axios.get(`${API}/${id}`);
+            console.log(d.data);
+            setReceip(d.data);
+        } catch (error) {
+            console.log("error");
+            
+        }
+        
+    }
 
   return (
     <>
