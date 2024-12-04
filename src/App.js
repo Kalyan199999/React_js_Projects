@@ -17,7 +17,9 @@
 
 // import LoadApi from "./api/LoadApi";
 
-import LoadReceips from "./receips/LoadReceips";
+// import LoadReceips from "./receips/LoadReceips";
+
+import GenerateQRCode from "./qrcode/GenerateQRCode";
 
 
 const App = ()=>{
@@ -31,7 +33,9 @@ const App = ()=>{
       {/* <Load_Countries /> */}
       {/* <Grid /> */}
       {/* <LoadApi /> */}
-      <LoadReceips />
+      {/* <LoadReceips /> */}
+
+      <GenerateQRCode />
 
     </>
   )
